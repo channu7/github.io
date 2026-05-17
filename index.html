@@ -3,18 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Channabasava Chola</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Channabasava Chola – Research Scholar at University of Mysore, India.">
-  <meta name="keywords" content="Channabasava Chola, AI Researcher, Deep Learning, NLP, Medical Imaging, University Of Mysore, India">
-  <meta name="author" content="Channabasava Chola">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Schema.org -->
+  <title>Channabasava Chola | AI Researcher</title>
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,290 +23,583 @@
     ]
   }
   </script>
+  
+  <meta name="description" content="Channabasava Chola – Research Scholar at University of Mysore, India. Specialist in Deep Learning, NLP, and Medical Imaging.">
+  <meta name="keywords" content="Channabasava Chola, AI Researcher, Deep Learning, NLP, Medical Imaging, University Of Mysore, India">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>
-/* ================= BASE ================= */
-body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  background: #ffffff;
-  color: #1f2937;
-  line-height: 1.7;
-}
+  <style>
+    :root {
+      --bg-dark: #0a0a0f;
+      --text-light: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.5);
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --gradient-1: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-h1, h2, h3 {
-  font-weight: 600;
-}
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.7;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
-.section {
-  padding: 70px 0;
-}
+    /* Abstract Background Glows */
+    .bg-glow {
+      position: fixed;
+      width: 60vw;
+      height: 60vw;
+      background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(0,0,0,0) 70%);
+      top: -20vw;
+      left: -20vw;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .bg-glow-2 {
+      position: fixed;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, rgba(0,0,0,0) 70%);
+      bottom: -10vw;
+      right: -10vw;
+      z-index: -1;
+      pointer-events: none;
+    }
 
-/* ================= HEADER ================= */
-header {
-  background: #0f172a;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    /* Typography */
+    h1, h2, h3 {
+      font-weight: 600;
+      line-height: 1.2;
+    }
 
-header ul {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-}
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
 
-header a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 400;
-}
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 10, 15, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--card-border);
+      padding: 1rem 0;
+    }
+    
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-#darkToggle {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
 
-/* ================= BIO ================= */
-.bio-container {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
 
-.bio-image img {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #e5e7eb;
-}
+    .nav-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
 
-.image-caption {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
+    .nav-links a:hover {
+      color: #8b5cf6;
+    }
 
-/* ================= SCHOLAR BADGE ================= */
-.scholar-badge {
-  margin-top: 15px;
-  padding: 12px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  display: inline-block;
-}
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+    }
 
-.scholar-badge a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #2563eb;
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
 
-/* ================= PUBLICATIONS ================= */
-.pub-item {
-  margin-bottom: 25px;
-  padding-left: 15px;
-  border-left: 3px solid #2563eb;
-}
+    .hero-text h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    
+    .hero-text h1 span {
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-/* ================= SKILLS ================= */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
+    .hero-text p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 90%;
+    }
 
-/* ================= FOOTER ================= */
-footer {
-  background: #0f172a;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
+    .stats-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      backdrop-filter: blur(10px);
+      margin-bottom: 2rem;
+    }
+    
+    .stats-badge a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-/* ================= DARK MODE ================= */
-body.dark {
-  background: #020617;
-  color: #e5e7eb;
-}
+    .stats-badge span {
+      color: var(--text-muted);
+    }
 
-body.dark header,
-body.dark footer {
-  background: #020617;
-}
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
 
-body.dark .pub-item {
-  border-color: #38bdf8;
-}
-</style>
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-light);
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background: var(--gradient-1);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px var(--accent-glow);
+      border-color: transparent;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      border-radius: 30px;
+      padding: 1rem;
+      background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(139,92,246,0.2) 100%);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      filter: grayscale(20%) contrast(1.1);
+      transition: filter 0.5s ease;
+    }
+
+    .hero-image-wrapper:hover img {
+      filter: grayscale(0%) contrast(1);
+    }
+
+    /* Sections */
+    section {
+      padding: 6rem 0;
+    }
+
+    .glass-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    /* Experience & Education */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      border-left: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.45rem;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--gradient-1);
+      border: 4px solid var(--bg-dark);
+    }
+
+    .timeline-date {
+      font-size: 0.9rem;
+      color: #8b5cf6;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-org {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-pill {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 1rem;
+      border-radius: 16px;
+      text-align: center;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .skill-pill:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+      transform: scale(1.05);
+    }
+
+    /* Publications */
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .pub-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .pub-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .pub-card .venue {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(139, 92, 246, 0.1);
+      color: #a78bfa;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 0;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      margin-top: 4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+      }
+      .hero-text p {
+        margin: 0 auto 2rem;
+      }
+      .social-links {
+        justify-content: center;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+    }
+
+    /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <div class="header-container container">
-    <h1>Channabasava Chola</h1>
-    <nav>
-      <ul>
-        <li><a href="#bio">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#education">Education</a></li>
+  <div class="bg-glow"></div>
+  <div class="bg-glow-2"></div>
+
+  <nav>
+    <div class="container nav-content">
+      <a href="#" class="nav-logo">CC.</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="darkToggle">🌙</button></li>
       </ul>
-    </nav>
-  </div>
-</header>
+    </div>
+  </nav>
 
-<main>
-
-<section id="bio" class="section">
-  <div class="container bio-container">
-    <div>
-      <h2>About Me</h2>
-      <p>
-        Hello! I am <strong>Channabasava Chola</strong>, a Research Scholar at University of Mysore, India, and a Visiting Researcher at Huanghuai University, China.  
-        I have 4 years of research experience in Machine Learning, NLP, Image Processing, and Medical Imaging.  
-      </p>
-
-      <div class="scholar-badge">
-        <a href="https://scholar.google.com/citations?user=dtUArAwAAAAJ&hl=en" target="_blank">
-          Google Scholar
-        </a>
-        <p><strong>h-index:</strong> 13 · <strong>Citations:</strong> 400+</p>
+  <section id="about" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text reveal">
+        <div class="stats-badge">
+          <i class="fa-brands fa-google"></i>
+          <a href="https://scholar.google.com/citations?user=dtUArAwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+          <span>|</span>
+          <span>h-index: 13</span>
+          <span>|</span>
+          <span>Citations: 400+</span>
+        </div>
+        
+        <h1>Hi, I'm <br><span>Channabasava Chola</span></h1>
+        <p>Research Scholar at University of Mysore & Visiting Researcher at Huanghuai University. Specializing in Machine Learning, Computer Vision, NLP, and Medical Imaging.</p>
+        
+        <div class="social-links">
+          <a href="https://in.linkedin.com/in/channabasava-chola-80715b162" target="_blank" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.researchgate.net/profile/Channabasava-Chola" target="_blank" class="social-icon" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+          <a href="https://orcid.org/0000-0002-7509-9354" target="_blank" class="social-icon" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper reveal">
+        <img src="images/channabasava-chola.jpg" alt="Channabasava Chola" onerror="this.src='https://via.placeholder.com/600x600/0a0a0f/3b82f6?text=Profile+Image'">
       </div>
     </div>
+  </section>
 
-    <div class="bio-image">
-      <img src="images/channabasava-chola.jpg" alt="Channabasava Chola">
-      <p class="image-caption">Profile photo (Google Scholar)</p>
+  <section id="experience" class="container">
+    <div class="reveal">
+      <h2>Experience & Education</h2>
     </div>
-  </div>
-</section>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+      <div class="reveal">
+        <h3 style="margin-bottom: 2rem; color: var(--text-muted);"><i class="fa-solid fa-briefcase"></i> Work History</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Jun 2024 - Jul 2024</div>
+            <div class="timeline-title">Visiting Lecturer</div>
+            <div class="timeline-org">Huanghuai University, China</div>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Lectured on Advanced Java and C++ to undergraduate students.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2022 - Present</div>
+            <div class="timeline-title">Thesis Supervisor</div>
+            <div class="timeline-org">Upgrad, India</div>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Guiding Data Science and Machine Learning students in their thesis projects.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2022 - Aug 2023</div>
+            <div class="timeline-title">Research Assistant</div>
+            <div class="timeline-org">Kyung Hee University, Korea</div>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Developed 3D object detection, RL-based robotic grasping, and human activity forecasting models.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Mar 2021 - Jul 2022</div>
+            <div class="timeline-title">Project Associate</div>
+            <div class="timeline-org">CSIR-CFTRI, India</div>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Developed BCNet for blood cell identification, FMDNet for face mask detection, and mango ripeness classification.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal">
+        <h3 style="margin-bottom: 2rem; color: var(--text-muted);"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Aug 2024 - Present</div>
+            <div class="timeline-title">Ph.D. in Computer Science</div>
+            <div class="timeline-org">MGM, Mysore, India</div>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Currently pursuing doctoral research focusing on advanced deep learning architectures.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jul 2017 - Aug 2019</div>
+            <div class="timeline-title">Master of Computer Applications</div>
+            <div class="timeline-org">University of Mysore, India</div>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Research direction: Machine Learning & Image Processing.</p>
+          </div>
+        </div>
 
-<section id="research" class="section">
-  <div class="container">
-    <h3>Career Vision</h3>
-    <ul>
-      <li>Seeking roles that leverage my skillset in a professional, innovative environment.</li>
-      <li>Committed to Computer Vision, aiming to contribute impactful research globally.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="education" class="section">
-  <div class="container">
-    <h2>Education</h2>
-    <p><strong>Ph.D. in Computer Science</strong> — MGM, Mysore, India (08-2024 – Present)  
-    </p>
-    <p><strong>MCA</strong> — University of Mysore, India (07-2017 – 08-2019)  
-       Research direction: Machine Learning, Image Processing  
-    </p>
-  </div>
-</section>
-
-<section id="experience" class="section">
-  <div class="container">
-    <h2>Work Experience</h2>
-    <ul>
-      <li><strong>Visiting Lecturer</strong> (06-2024 – 07-2024) – Huanghuai University, China. Lectured on Advanced Java and C++.</li>
-      <li><strong>Thesis Supervisor</strong> (09-2022 – Present) – Upgrad, India. Guided DS and ML students.</li>
-      <li><strong>Research Assistant</strong> (09-2022 – 08-2023) – Kyung Hee University, Korea. Developed 3D object detection, RL-based robotic grasping, and human activity forecasting models.</li>
-      <li><strong>Project Associate</strong> (03-2021 – 07-2022) – CSIR-CFTRI, India. Developed BCNet for blood cell identification, FMDNet for face mask detection, and mango ripeness classification.</li>
-      <li><strong>Teaching Assistant</strong> (09-2019 – 03-2021) – IIIT Kottayam. Worked on sunspot detection, COVID-19 detection, Arabic text classification, and microscopic image classification.</li>
-    </ul>
-
-    <h3>Awards</h3>
-    <ul>
-      <li>Best Paper Award, ICIEA-2022</li>
-      <li>Best Paper Award, MDPI Online Conference on AI Algorithms, 2021</li>
-    </ul>
-  </div>
-</section>
-
-<section id="publications" class="section">
-  <div class="container">
-    <h2>Selected Publications</h2>
-    <div class="pub-item">
-      <h3>Enhancing Maize Crop Health: Deep Learning Approach for Disease Detection Using Leaf Images</h3>
-      <p><em>AIKP 2024, Springer</em></p>
+        <h3 style="margin: 3rem 0 2rem; color: var(--text-muted);"><i class="fa-solid fa-trophy"></i> Awards</h3>
+        <ul style="list-style-type: none; display: flex; flex-direction: column; gap: 1rem;">
+          <li style="display: flex; gap: 1rem; align-items: center; background: var(--card-bg); padding: 1rem; border-radius: 12px; border: 1px solid var(--card-border);">
+            <i class="fa-solid fa-award" style="color: #fbbf24; font-size: 1.5rem;"></i>
+            <span>Best Paper Award, ICIEA-2022</span>
+          </li>
+          <li style="display: flex; gap: 1rem; align-items: center; background: var(--card-bg); padding: 1rem; border-radius: 12px; border: 1px solid var(--card-border);">
+            <i class="fa-solid fa-award" style="color: #fbbf24; font-size: 1.5rem;"></i>
+            <span>Best Paper Award, MDPI Online Conference on AI Algorithms, 2021</span>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="pub-item">
-      <h3>Explainable AI Based Framework for Banana Disease Detection</h3>
-      <p><em>ICITIIT 2024, IEEE</em></p>
-    </div>
-    <div class="pub-item">
-      <h3>Investigating the Impact of Preprocessing Techniques on Arabic Text Classification</h3>
-      <p><em>International Journal of Advanced Computer Science & Applications, 2024</em></p>
-    </div>
-    <div class="pub-item">
-      <h3>Human Activity Prediction Based on Forecasted IMU Activity Signals by Seq-to-Seq DNN</h3>
-      <p><em>Sensors, 2023</em></p>
-    </div>
-    <div class="pub-item">
-      <h3>FMDNet: Efficient System for Face Mask Detection Using Lightweight Model</h3>
-      <p><em>Sensors, 2023</em></p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills" class="section">
-  <div class="container">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div>Machine Learning, Deep Learning, NLP, Image Processing</div>
-      <div>Python, MATLAB, TensorFlow, PyTorch, Keras</div>
-      <div>HTML, CSS, JavaScript</div>
-      <div>Git, GitHub, Microsoft Office, LaTeX, Mendeley</div>
+  <section id="publications" class="container">
+    <div class="reveal">
+      <h2>Selected Publications</h2>
     </div>
-  </div>
-</section>
+    <div class="pub-grid">
+      <div class="glass-card pub-card reveal">
+        <h3>Enhancing Maize Crop Health: Deep Learning Approach for Disease Detection Using Leaf Images</h3>
+        <p>A novel deep learning framework to accurately classify and detect diseases in maize crops from leaf images.</p>
+        <span class="venue">AIKP 2024, Springer</span>
+      </div>
+      <div class="glass-card pub-card reveal">
+        <h3>Explainable AI Based Framework for Banana Disease Detection</h3>
+        <p>Integrating XAI techniques into disease detection models to provide transparent and interpretable diagnosis.</p>
+        <span class="venue">ICITIIT 2024, IEEE</span>
+      </div>
+      <div class="glass-card pub-card reveal">
+        <h3>Investigating the Impact of Preprocessing Techniques on Arabic Text Classification</h3>
+        <p>Comprehensive study on how different preprocessing pipelines affect the performance of NLP models for Arabic.</p>
+        <span class="venue">IJACSA, 2024</span>
+      </div>
+      <div class="glass-card pub-card reveal">
+        <h3>Human Activity Prediction Based on Forecasted IMU Activity Signals by Seq-to-Seq DNN</h3>
+        <p>Advanced sequence-to-sequence deep neural networks for accurate IMU signal forecasting and activity prediction.</p>
+        <span class="venue">Sensors, 2023</span>
+      </div>
+      <div class="glass-card pub-card reveal">
+        <h3>FMDNet: Efficient System for Face Mask Detection Using Lightweight Model</h3>
+        <p>A highly efficient, lightweight architecture designed for real-time face mask detection in edge devices.</p>
+        <span class="venue">Sensors, 2023</span>
+      </div>
+    </div>
+  </section>
 
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Contact & Profiles</h2>
-    <p>LinkedIn: <a href="https://in.linkedin.com/in/channabasava-chola-80715b162" target="_blank">Profile</a></p>
-    <p>ResearchGate: <a href="https://www.researchgate.net/profile/Channabasava-Chola" target="_blank">Profile</a></p>
-    <p>Google Scholar: <a href="https://scholar.google.co.in/citations?user=dtUArAwAAAAJ&hl=en" target="_blank">Profile</a></p>
-  </div>
-</section>
+  <section id="skills" class="container">
+    <div class="reveal">
+      <h2>Technical Arsenal</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-pill">Python</div>
+      <div class="skill-pill">PyTorch</div>
+      <div class="skill-pill">TensorFlow</div>
+      <div class="skill-pill">Keras</div>
+      <div class="skill-pill">MATLAB</div>
+      <div class="skill-pill">Deep Learning</div>
+      <div class="skill-pill">Machine Learning</div>
+      <div class="skill-pill">Computer Vision</div>
+      <div class="skill-pill">NLP</div>
+      <div class="skill-pill">HTML/CSS/JS</div>
+      <div class="skill-pill">Git & GitHub</div>
+      <div class="skill-pill">LaTeX</div>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2026 Channabasava Chola</p>
-</footer>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Channabasava Chola. Designed with visual excellence.</p>
+    </div>
+  </footer>
 
-<script>
-const btn = document.getElementById('darkToggle');
-btn.onclick = () => {
-  document.body.classList.toggle('dark');
-  localStorage.setItem('theme',
-    document.body.classList.contains('dark') ? 'dark' : 'light'
-  );
-};
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
-}
-</script>
-
+  <script>
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    reveal(); 
+  </script>
 </body>
 </html>
